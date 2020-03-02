@@ -15,6 +15,9 @@ public class Ledger{
         _Block genesisBlock = new _Block();
         genesisBlock.index = 0;
         genesisBlock.timestamp = 0;
+        ArrayList<_Transaction> genesis =  new ArrayList<>();
+        genesis.add(new _Transaction("genesis_key","3 organization"));
+        genesisBlock.trans = genesis;
         genesisBlock.hash = calculateHash(genesisBlock);
         genesisBlock.prevHash = "";
 
