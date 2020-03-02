@@ -6,8 +6,11 @@
       <change beforePath="$PROJECT_DIR$/out/production/hyperledger-fabric-400-java/hama/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hyperledger-fabric-400-java/hama/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hama/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hama/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hama/fabric/ClientSDK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hama/fabric/ClientSDK.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hama/fabric/Fabric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hama/fabric/Fabric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hama/fabric/Committer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hama/fabric/Committer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hama/fabric/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hama/fabric/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hama/fabric/Endorser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hama/fabric/Endorser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hama/fabric/Ledger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hama/fabric/Ledger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hama/fabric/Peer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hama/fabric/Peer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +73,7 @@
       <workItem from="1582523113040" duration="18000" />
       <workItem from="1582956875906" duration="3642000" />
       <workItem from="1583038250938" duration="8619000" />
-      <workItem from="1583062487620" duration="5674000" />
+      <workItem from="1583062487620" duration="14254000" />
     </task>
     <task id="LOCAL-00001" summary="init - 1">
       <created>1583065141096</created>
@@ -79,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583065141096</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init - 2">
+      <created>1583124929743</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583124929743</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,78 +97,88 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init - 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="init - 1" />
+    <MESSAGE value="init - 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="init - 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="681" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1583058799035">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="681" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1583058799035" />
-    <state x="339" y="0" key="CommitChangelistDialog2" timestamp="1583065139989">
+    <state x="339" y="0" key="CommitChangelistDialog2" timestamp="1583124928832">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="339" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583065139989" />
-    <state width="458" height="546" key="DebuggerActiveHint" timestamp="1583124564096">
+    <state x="339" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583124928832" />
+    <state width="744" height="546" key="DebuggerActiveHint" timestamp="1583148397267">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="458" height="546" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1583124564096" />
-    <state width="1343" height="216" key="GridCell.Tab.0.bottom" timestamp="1583124915508">
+    <state width="744" height="546" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1583148397267" />
+    <state width="1481" height="194" key="GridCell.Tab.0.bottom" timestamp="1583148491551">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1343" height="216" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583124915508" />
+    <state width="1481" height="194" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583148491551" />
     <state width="1354" height="260" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1582523155165" />
-    <state width="1343" height="216" key="GridCell.Tab.0.center" timestamp="1583124915508">
+    <state width="1481" height="194" key="GridCell.Tab.0.center" timestamp="1583148491551">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1343" height="216" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583124915508" />
+    <state width="1481" height="194" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583148491551" />
     <state width="1354" height="260" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1582523155162" />
-    <state width="1343" height="216" key="GridCell.Tab.0.left" timestamp="1583124915508">
+    <state width="1481" height="194" key="GridCell.Tab.0.left" timestamp="1583148491551">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1343" height="216" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583124915508" />
+    <state width="1481" height="194" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583148491551" />
     <state width="1354" height="260" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1582523155161" />
-    <state width="1343" height="216" key="GridCell.Tab.0.right" timestamp="1583124915508">
+    <state width="1481" height="194" key="GridCell.Tab.0.right" timestamp="1583148491551">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1343" height="216" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583124915508" />
+    <state width="1481" height="194" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583148491551" />
     <state width="1354" height="260" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1582523155163" />
-    <state width="1343" height="216" key="GridCell.Tab.1.bottom" timestamp="1583124915509">
+    <state width="1481" height="216" key="GridCell.Tab.1.bottom" timestamp="1583148404768">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1343" height="216" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583124915509" />
-    <state width="1343" height="216" key="GridCell.Tab.1.center" timestamp="1583124915509">
+    <state width="1481" height="216" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583148404768" />
+    <state width="1481" height="216" key="GridCell.Tab.1.center" timestamp="1583148404768">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1343" height="216" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583124915509" />
-    <state width="1343" height="216" key="GridCell.Tab.1.left" timestamp="1583124915508">
+    <state width="1481" height="216" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583148404768" />
+    <state width="1481" height="216" key="GridCell.Tab.1.left" timestamp="1583148404768">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1343" height="216" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583124915508" />
-    <state width="1343" height="216" key="GridCell.Tab.1.right" timestamp="1583124915509">
+    <state width="1481" height="216" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583148404768" />
+    <state width="1481" height="216" key="GridCell.Tab.1.right" timestamp="1583148404768">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1343" height="216" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583124915509" />
-    <state x="443" y="89" key="Vcs.Push.Dialog.v2" timestamp="1583065155850">
+    <state width="1481" height="216" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583148404768" />
+    <state x="443" y="89" key="Vcs.Push.Dialog.v2" timestamp="1583124937689">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="443" y="89" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583065155850" />
+    <state x="443" y="89" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583124937689" />
     <state x="459" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1583062982053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="459" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583062982053" />
+    <state x="0" y="0" width="811" height="824" key="find.popup" timestamp="1583147983671">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="0" width="811" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1583147983671" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/hama/Main.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/hama/fabric/Ledger.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/hama/Main.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/hama/fabric/Ledger.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hama/fabric/Ledger.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

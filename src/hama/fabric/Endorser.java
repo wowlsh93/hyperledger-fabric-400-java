@@ -12,14 +12,24 @@ public class Endorser implements Runnable {
     public void run() {
 
         while (!_stop) {
-            Transaction trans = _peer._transactionList.getFirst();
+            Transaction trans = _peer._transactionList.poll();
+            if (trans == null)
+                continue;
 
             if (trans.client_msp == _peer.fabric.MSP_org1) {
                 //
                 //execute chain code !!!
                 //
-                RWSet rwset = new RWSet(trans.key,trans.value, _peer.msp.id, null );
-                _peer._rwsetList.addLast(rwset);
+
+                _peer.rwlock.lock();
+                try {
+                    //_peer._rwset = new RWSet( _peer.msp.id, trans.key,trans.value, null );
+                    RWSet rwset = new RWSet( _peer.msp.id, trans.key,trans.value, null );
+                    _peer._rwsetList.add(rwset);
+                    _peer.rwsetok.signal();
+                } finally {
+                    _peer.rwlock.unlock();
+                }
             }
         }
 

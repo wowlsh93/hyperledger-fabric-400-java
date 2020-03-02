@@ -15,15 +15,15 @@ public class Main {
         long startTime = System.currentTimeMillis();
 
 
-        for (int i = 0 ; i < 14 ; i++) {
+        for (int i = 0 ; i < 1000010 ; i++) {
             sdk.writeTrans(String.valueOf(i), String.valueOf(i));
         }
 
         System.out.println("Start 3");
 
         while(true) {
-            String result = sdk.getTrans("10");
-            if (!result.equals("")) {
+            String result = sdk.getTrans("1000000");
+            if (result != null && !result.equals("")) {
                 break;
             }
         }
@@ -32,5 +32,11 @@ public class Main {
         long estimatedTime = System.currentTimeMillis() - startTime;
         System.out.println("took " + estimatedTime + " ms");
 
+
+        try {
+            Thread.sleep(1000 * 100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

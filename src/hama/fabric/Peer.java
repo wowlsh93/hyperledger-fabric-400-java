@@ -1,7 +1,10 @@
 package hama.fabric;
 
 import java.util.ArrayList;
-import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Peer {
 
@@ -17,9 +20,17 @@ public class Peer {
     public Fabric fabric;
     public MSP msp;
 
-    public ConcurrentLinkedDeque<Transaction> _transactionList = new ConcurrentLinkedDeque<>();
-    public ConcurrentLinkedDeque<RWSet> _rwsetList = new ConcurrentLinkedDeque<>();
-    public ConcurrentLinkedDeque<Block> _blockList = new ConcurrentLinkedDeque<>();
+    public ConcurrentLinkedQueue<Transaction> _transactionList = new ConcurrentLinkedQueue<>();
+    public ConcurrentLinkedQueue<RWSet> _rwsetList = new ConcurrentLinkedQueue<>();
+    public RWSet _rwset = null;
+    public ConcurrentLinkedQueue<Block> _blockList = new ConcurrentLinkedQueue<>();
+    public Block _block = null;
+    public final Lock rwlock = new ReentrantLock();
+    public final Condition rwsetok = rwlock.newCondition();
+
+    public final Lock bclock = new ReentrantLock();
+    public final Condition blockok = bclock.newCondition();
+
 
     ArrayList<Thread> threads = new ArrayList<Thread>();
     private boolean _stop;
@@ -39,13 +50,34 @@ public class Peer {
     }
 
     public RWSet addTrans(Transaction trans){
-        _transactionList.addLast(trans);
-        RWSet rwset = _rwsetList.getFirst();
+        _transactionList.add(trans);
+
+//        lock.lock();
+//        RWSet rwset = null;
+//        try {
+//            rwsetok.await();
+//            rwset = this._rwset;
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        finally {
+//            lock.unlock();
+//        }
+//
+//        return rwset;
+
+        RWSet rwset = null;
+        while (rwset == null) {
+            rwset = _rwsetList.poll();
+        }
         return rwset;
     }
 
     public void addBlock(Block block){
-        _blockList.addLast(block);
+        //this.bclock.lock();
+        _blockList.add(block);
+        //_block = block;
+        //this.blockok.signal();
     }
 
     public boolean validating(Block block){

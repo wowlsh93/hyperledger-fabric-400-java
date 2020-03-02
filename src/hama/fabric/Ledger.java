@@ -25,7 +25,7 @@ public class Ledger{
     }
 
     public void addBlock(Block block){
-        _Block prevBlock = blockChain.get(blockChain.size());
+        _Block prevBlock = blockChain.get(blockChain.size() - 1);
         _Block newBlock = generateBlock(prevBlock, block);
         blockChain.add(newBlock);
     }
@@ -35,6 +35,7 @@ public class Ledger{
         newBlock.index = oldBlock.index + 1;
         newBlock.timestamp = System.currentTimeMillis() / 1000;
         newBlock.prevHash = oldBlock.hash;
+        newBlock.trans = block.trans;
         newBlock.hash = calculateHash(newBlock);
 
         return newBlock;

@@ -18,7 +18,7 @@ public class ClientSDK {
             msps.add(fab.MSP_peer1);
             msps.add(fab.MSP_peer2);
 
-            RWSet rwset = new RWSet(key, value, "", msps);
+            RWSet rwset = new RWSet("", key, value, msps);
             fab.sendToOrderer(rwset);
             return "ok";
         }

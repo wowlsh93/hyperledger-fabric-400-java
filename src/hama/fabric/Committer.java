@@ -10,10 +10,21 @@ public class Committer implements Runnable {
 
     @Override
     public void run() {
-
         while (!_stop) {
+//            Block block = null;
+//            _peer.bclock.lock();
+//            try {
+//                _peer.blockok.wait();
+//                block = _peer._block;
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
 
-            Block block = _peer._blockList.getFirst();
+
+            Block block = _peer._blockList.poll();
+            if (block == null)
+                continue;
+
             boolean ok = _peer.validating(block);
             if (ok == false) {
                 continue;
