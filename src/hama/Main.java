@@ -15,18 +15,18 @@ public class Main {
         long startTime = System.currentTimeMillis();
 
 
-        for (int i = 0 ; i < 1000010 ; i++) {
+        for (int i = 0 ; i < 1000000 ; i++) {
             sdk.writeTrans(String.valueOf(i), String.valueOf(i));
         }
 
         System.out.println("Start 3");
 
-        while(true) {
-            String result = sdk.getTrans("1000000");
-            if (result != null && !result.equals("")) {
-                break;
-            }
-        }
+//        while(true) {
+//            String result = sdk.getTrans("1000000");
+//            if (result != null && !result.equals("")) {
+//                break;
+//            }
+//        }
         System.out.println("Start 4");
 
         long estimatedTime = System.currentTimeMillis() - startTime;
